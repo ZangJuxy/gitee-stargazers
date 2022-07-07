@@ -1,0 +1,76 @@
+hr{
+    opacity: 0.3
+}
+#content{
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+#logo{
+    margin: 40px 0 30px 0;
+}
+#title{
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+#desc{
+    color: #333333;
+    margin-bottom: 30px;
+}
+#repositoryLabel{
+    margin: 10px 0;
+    display: block;
+}
+#repository {
+    width: 80%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #555;
+}
+#repositoryName{
+    color: #666666;
+}
+#svg{
+    width: 1024px;
+    height: 450px;
+    margin: 0 auto;
+    background: url("/images/loading.gif") center center no-repeat;
+    background-size:auto 25%;
+}
+.btn{
+    width: 80%;
+    background-color: #3F3D56;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 450;
+}
+#code{
+    width: 100%;
+    height: 100px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.3em;
+    overflow-x: hidden;
+    display: block;
+    color: #e9e9f4;
+    background: #282936;
+}
+.copy-btn{
+    width: 100%;
+    margin-top: -20px;
+}

@@ -1,0 +1,23 @@
+{
+  "name": "gitee-stargazers",
+  "version": "1.0.0",
+  "description": "将gitee仓库star趋势展示在折线图上",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./bin/run"
+  },
+  "author": "maxiaofa",
+  "license": "MulanPSL-2.0",
+  "dependencies": {
+    "art-template": "^4.13.2",
+    "echarts": "^5.3.3",
+    "express": "^4.18.1",
+    "express-art-template": "^1.0.1",
+    "moment": "^2.29.3",
+    "request": "^2.88.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/maxiaofa/gitee-stargazers"
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/favicon.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/favicon.png" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon.png" sizes="16x16" />
+    <title>Gitee Star Charts</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.10/dist/clipboard.min.js"></script>
+</head>
+<body>
+    <div id="content">
+        <img id="logo" alt="GITEE-STARCHARTS" src="/images/stars.svg" width="35%">
+        <h1 id="title">GITEE-STARCHARTS</h1>
+        <p id="desc">将Gitee项目Star增长趋势显示在折线图.</p>
+        <hr>
+        {{if input}}
+        <form method="POST" onsubmit="return false">
+            <label for="repository" id="repositoryLabel">Repository:</label>
+            <input type="text" id="repository" name="repository" value="maxiaofa/gitee-stargazers"
+                                                   placeholder="maxiaofa/gitee-stargazers" autofocus><br>
+        </form>
+        <button type="button" class="btn" onclick="submit()">Submit</button>
+        {{else}}
+        <p><a href="https://gitee.com/{{name}}" id="repositoryName">{{name || ''}}</a> 创建于 <b>{{creatTime || ''}}</b> 到现在为止已经获得 <b>{{starNum || ''}}</b>个 star!</p>
+        <div id="svg">
+            <img alt="svg" src="{{url}}/{{name}}/chart.svg" width="1024" height="450">
+        </div>
+        <hr>
+        <span>您可以在存储库的 README.md 中包含该图表，如下所示：</span>
+        <pre>
+            <code id="code">
+ ## Gitee-Stargazers over time
+ [![Gitee-Stargazers over time]({{url}}/{{name}}/chart.svg)]({{url}}/{{name}})
+            </code>
+<button class="btn copy-btn" data-clipboard-target="#code">Copy</button>
+        </pre>
+        {{/if}}
+    </div>
+    <script>
+        const clipboard = new ClipboardJS('.copy-btn');
+        clipboard.on('success', function(e) {
+            e.clearSelection();
+            alert("复制成功")
+        });
+        clipboard.on('error', function(e) {
+            alert("复制失败,请手动复制")
+        });
+
+        function submit(){
+            window.location.href = document.getElementById('repository').value
+        }
+    </script>
+</body>
+</html>

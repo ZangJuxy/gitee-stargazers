@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+const app = require('../app');
+const http = require('http');
+
+const port = '80';
+app.set('port', port);
+
+
+const server = http.createServer(app);
+
+server.listen(port);
+console.log('监听端口' + port + '服务已经启动...');
+console.log("访问前端: http://localhost:" + port);
