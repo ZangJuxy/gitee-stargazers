@@ -1,9 +1,9 @@
 module.exports = {
     gitee: {
-        username: 'GITEE帐号',
-        password: 'GITEE密码',
-        clientId: '应用id',
-        clientSecret: '应用密钥',
+        username: 'EliaukU',
+        password: 'zangzang5200.',
+        clientId: 'e54074af5eff20fd6363221d363e1953432c876353a1de424815fe19a9e94e7a',
+        clientSecret: '95338f37e501ff2de882e6e08eceb568154fa39772dfd71cf9483ed35b2a2f3b',
 
         apiUrl: 'https://gitee.com/api/v5/',
         tokenUrl: 'https://gitee.com/oauth/token',
